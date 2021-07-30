@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:mobx_study/count_mobx.dart';
+import 'package:mobx_study/counter.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
 
-  final CounterMobx counter = CounterMobx();
+  final Counter counter = Counter();
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class MyHomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          counter.increment!();
+          counter.increment();
         },
         tooltip: 'Increment',
         child: Icon(Icons.add),
